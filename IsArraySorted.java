@@ -1,22 +1,28 @@
-package Recursion;
+package Arrays;
 
 public class IsArraySorted {
+    static void approach_1(int arr[], int n) {
+        for(int i = 0; i < n; i++) {
+            for(int j = i + 1; j < n; j++) {
+                if(arr[i] > arr[j]) {
+                    System.out.println("Array is not sorted...");
+                    return;
+                }
+            }
+        }
+    }
 
-    static boolean isSorted(int arr[], int index) {
-        // Termination Case
-        if(arr.length-1 == index) {
-            return true;
+    static void approach_2(int arr[], int n) {
+        for(int i = 1; i < n; i++) {
+            if(arr[i - 1] > arr[i]) {
+                System.out.println("Array is not sorted...");
+                return;
+            }
         }
-        if(arr[index] > arr[index + 1]) {
-            return false;
-        }
-        // Small Problem
-        return isSorted(arr, index+1);
+        System.out.println("Array is sorted...");
     }
 
     public static void main(String[] args) {
-        int arr[] = {1,2,5,8,9};
-        boolean result = isSorted(arr, 0);
-        System.out.println(result);
+        
     }
 }
