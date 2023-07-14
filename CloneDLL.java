@@ -24,6 +24,29 @@ public class CloneDLL {
         }
         NodeDLL head_2 = map.get(head);
     }
+
+    static void approach_2(NodeDLL start) {
+        NodeDLL next, temp;
+        for(NodeDLL current = start; current != null; current = current.next) {
+            next = current.next;
+            current.next = new NodeDLL(current.data);
+            current.next.next= next;
+        }
+        for(NodeDLL current = start; current != null; current = current.next.next){
+            current.next.random = current.random != null ? current.random.next : null;
+        }
+        NodeDLL old_pointer = start;
+        NodeDLL new_pointer = start.next;
+        NodeDLL old_head = start.next;
+        while(old_pointer != null) {
+            old_pointer.next = old_pointer.next.next;
+            new_pointer.next = new_pointer.next != null ? new_pointer.next.next : null;
+            old_pointer = old_pointer.next;
+            new_pointer = new_pointer.next;
+        }
+        // return old_head;
+    }
+
     public static void main(String[] args) {
 
     }
