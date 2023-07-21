@@ -69,3 +69,10 @@ Graph Traversal
 
 
 BFS - Breadth First Search
+BFS on disconnected graph
+Counting Connected components in an Undirected Graph
+
+DFS - Depth First Search
+DFS for disconnected graph
+
+Graph Using HashMap
