@@ -1,0 +1,71 @@
+Graph Data Structures
+
+- Tree data structure uses a hierarchy and uses a parent child relationship
+to represent hierarchy
+- Now we can have random connections to the node
+- When we have random connections then we cannot use tree, for this purpose we use Graph Data Structure
+
+Graph Data Structure consist of 2 components
+- finite set of vertices alse called nodes
+- finite set of ordered pair of the form(u,v) called as edge.
+
+Applications of Graph
+- used to represent networks
+- it may be path b/w two cities, telephone network, circuit network
+
+Neo4J - most popular database that uses graph data structure
+
+Graph data structure is represented by a pair of set G=(V,E)
+- First pair is set of vertices
+- Another pair is set of edges
+
+
+Directed and Undirected Graph
+
+Terminologies in Graph
+
+1. Degree
+- in Undirected graph degree of a vertices is number of edges going through it
+- in directed graph we have 2 types of degree
+  - inDegree - number of edges coming towards a vertices
+  - outDegree - number of edges coming out of it.
+2. Walk - Sequence of vertices that we get by following edges of graph
+    - v1 -> v2 -> v4 -> v3 -> v2
+3. Path - Special Walk with no repetition of vertices allowed
+    - v1 -> v2 -> v4 -> v3
+4. Cyclic - If there exists a walk that begins and ends with same vertex
+5. Acyclic - If there exists a cycle
+
+
+Graph Representations
+- Adjacency Matrix
+- Adjacency List
+
+
+Adjacency Matrix
+Properties of Adjacency Matrix Representation
+- Space Required : 0(VxV)
+- Operations :
+    - check if u and v are adjacent : 0(1)
+    - find all vertices adjacent to u : 0(v)
+    - find degree of u : 0(v)
+    - add/remove an edge : 0(1)
+    - add/remove a vertex : 0(v^2)
+
+
+Adjacency List
+Properties of Adjacency List Representation
+- Space Required : for directed - 0(V+E) and for Undirected - V+2*E
+- Operations :
+    - check if there exists and edge from u to v : O(v)
+    - find all vertices adjacent to u : 0(degree(u))
+    - find degree of u : 0(1)
+    - add an edge : 0(1)
+    - remove an edge : O(v)
+
+Graph Traversal
+- BFS - Breadth First Search - Queue
+- DFS - Depth First Search - Stack
+
+
+BFS - Breadth First Search
