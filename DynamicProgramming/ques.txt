@@ -1,0 +1,15 @@
+DP - Dynamic Programming
+- Entirely based on recursion
+
+Overlapping Sub-problem
+Sub-structure property
+
+When do we use DP ?
+- Count Something, number of ways
+- Minimise or Maxmise the values
+- Yes/No Questions
+
+DP offers two solutions
+- Memoization (Top Down) - maintain one cache
+- Tabulation (Bottom Up) - use loop instead of recursion
+
